@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --base-href=/ng-tech-tree --deploy-url=\"https://turanar.github.io/ng-tech-tree/\"",
+    "build": "ng build --base-href=/ng-tech-tree/ --deploy-url=\"https://turanar.github.io/ng-tech-tree/\"",
     "postbuild": "cp docs/index.html docs/404.html",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"

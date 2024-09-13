@@ -63,7 +63,7 @@
           },
           "configurations": {
             "production": {
-              "baseHref": "/ng-tech-tree",
+              "baseHref": "/ng-tech-tree/",
               "budgets": [
                 {
                   "type": "initial",

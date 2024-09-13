@@ -63,7 +63,7 @@
           },
           "configurations": {
             "production": {
-              "baseHref": "/stellaris-tech-tree",
+              "baseHref": "/ng-tech-tree",
               "budgets": [
                 {
                   "type": "initial",

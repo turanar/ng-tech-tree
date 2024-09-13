@@ -1,1 +1,36 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'tippy.js/dist/tippy.css';
+@import 'tippy.js/themes/light.css';
+@import 'tippy.js/animations/scale.css';
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { margin:0; padding:0; }
+table { border-collapse:collapse; border-spacing:0; }
+fieldset,img { border:0; }
+address,caption,cite,code,dfn,em,strong,th,var { font-style:normal; font-weight:normal; }
+caption,th { text-align:left; }
+h1,h2,h3,h4,h5,h6 { font-size:100%; font-weight:normal; }
+q:before,q:after { content:''; }
+abbr,acronym { border:0; }
+
+body {
+  background: #474747;
+}
+
+.tippy-box {
+  background-color: #222;
+  border: 2px solid #327866;
+}
+
+.tippy-arrow {
+  color: #222 !important;
+}
+
+body::after{
+  //content: url("../public/icons.png");
+  position:absolute; width:0; height:0; overflow:hidden; z-index:-1;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+}

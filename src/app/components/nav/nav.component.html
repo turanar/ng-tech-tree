@@ -1,0 +1,10 @@
+<nav class="menu">
+  <div class="nav">
+    @for (opt of (areaOptions | keyvalue); track $index) {
+      <a [class.selected]="selected() === $index" (click)="onClick($index)">
+        <img src="images/icons/{{ opt.value.icon }}"> {{ opt.value.label }}
+      </a>
+    }
+    <a class="separator"></a>
+  </div>
+</nav>

@@ -11,7 +11,7 @@
          [class.active]="tech.tier < 1 || tech.active"
          [class.rare]="tech.is_rare" [class.dangerous]="tech.is_dangerous">
 
-        <div class="icon" [style.background-image]="'url(/images/technologies/' + tech.key +'.png)'">
+        <div class="icon" [style.background-image]="'url(images/technologies/' + tech.key +'.png)'">
 
         </div>
         <p class="node-name" title="{{tech.name}}">{{tech.name}}</p>
@@ -29,7 +29,7 @@
             @if (tech.tier == 0) { &#160; }
         </p>
         @if (tech.category) {
-            <div class="node-status" style="background-image: url('/images/categories/{{ tech.category }}.png')"></div>
+            <div class="node-status" style="background-image: url('images/categories/{{ tech.category }}.png')"></div>
         }
     </div>
 </ng-template>

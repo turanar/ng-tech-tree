@@ -59,7 +59,12 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "public/scripts/jquery.min.js",
+              "public/scripts/raphael.min.js",
+              "public/scripts/Treant.js",
+              "public/scripts/dynamic-drag.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -73,7 +78,7 @@
                 {
                   "type": "anyComponentStyle",
                   "maximumWarning": "2kB",
-                  "maximumError": "4kB"
+                  "maximumError": "5kB"
                 }
               ],
               "outputHashing": "all"

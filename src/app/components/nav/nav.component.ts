@@ -1,5 +1,5 @@
 import {Component, model, output} from '@angular/core';
-import {KeyValuePipe} from "@angular/common";
+import { KeyValuePipe, NgOptimizedImage } from "@angular/common";
 
 export class AreaOption {
   label: string;
@@ -21,9 +21,10 @@ export let AreaOptions: { [key in number]: AreaOption } = {
 @Component({
   selector: 'app-nav',
   standalone: true,
-  imports: [
-    KeyValuePipe
-  ],
+    imports: [
+        KeyValuePipe,
+        NgOptimizedImage
+    ],
   templateUrl: './nav.component.html',
   styleUrl: './nav.component.scss'
 })

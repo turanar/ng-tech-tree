@@ -1,1 +1,37 @@
-<p>tech-tree works!</p>
+<div>
+    <div class="chart" id="{{ this.area() }}" #parent>
+        <ng-container #container>
+            <a>Ho ho ho</a>
+        </ng-container>
+    </div>
+</div>
+
+<ng-template #node let-tech let-item="item">
+    <div id="{{ tech.key }}"
+         [class.active]="tech.tier < 1 || tech.active"
+         [class.rare]="tech.is_rare" [class.dangerous]="tech.is_dangerous">
+
+        <div class="icon" [style.background-image]="'url(/images/technologies/' + tech.key +'.png)'">
+
+        </div>
+        <p class="node-name" title="{{tech.name}}">{{tech.name}}</p>
+        <p class="node-title">
+            {{ tech.category }} -
+            @switch (tech.tier) {
+                @case (0) { <span class="tier tier-0">Starting</span> }
+                @default  { <span class="tier tier-{{tech.tier}}">Tier {{tech.tier}}</span> }
+            }
+        </p>
+        <p class="node-desc">
+            @if (tech.tier > 0) {
+                Cost: <span class="{{tech.area}}-research">{{tech.cost}}, Weight: {{tech.base_weight}}</span>
+            }
+            @if (tech.tier == 0) { &#160; }
+        </p>
+        @if (tech.category) {
+            <div class="node-status" style="background-image: url('/images/categories/{{ tech.category }}.png')"></div>
+        }
+    </div>
+</ng-template>
+
+

@@ -1,5 +1,6 @@
-<app-nav></app-nav>
+<app-nav (onTabChange)="selected = $event"></app-nav>
 <main class="main">
-  <tech-tree></tech-tree>
-  <tech-tree></tech-tree>
+  <tech-tree area="physics"     [class.hide]="selected != 0 && selected != 1"></tech-tree>
+  <tech-tree area="society"     [class.hide]="selected != 0 && selected != 2"></tech-tree>
+  <tech-tree area="engineering" [class.hide]="selected != 0 && selected != 3"></tech-tree>
 </main>

@@ -2,7 +2,7 @@
   <div class="nav">
     @for (opt of (areaOptions | keyvalue); track $index) {
       <a [class.selected]="selected() === $index" (click)="onClick($index)">
-        <img src="images/icons/{{ opt.value.icon }}"> {{ opt.value.label }}
+        <img ngSrc="images/icons/{{ opt.value.icon }}" width="18" height="18" alt="{{ opt.value.label }}"> {{ opt.value.label }}
       </a>
     }
     <a class="separator"></a>

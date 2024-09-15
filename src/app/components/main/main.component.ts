@@ -13,5 +13,5 @@ import { NavComponent } from "../nav/nav.component";
   styleUrl: './main.component.scss'
 })
 export class MainComponent {
-
+  selected: number = 0;
 }

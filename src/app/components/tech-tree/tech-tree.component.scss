@@ -1,0 +1,262 @@
+/* required LIB STYLES */
+/* .Treant se automatski dodaje na svaki chart conatiner */
+.Treant { position: relative; overflow: hidden; padding: 0 !important; }
+.Treant > .node,
+.Treant > .pseudo { position: absolute; display: block; visibility: hidden; }
+.Treant.Treant-loaded .node,
+.Treant.Treant-loaded .pseudo { visibility: visible; }
+.Treant > .pseudo { width: 0; height: 0; border: none; padding: 0; }
+.Treant .collapse-switch { width: 3px; height: 3px; display: block; border: 1px solid black; position: absolute; top: 1px; right: 1px; cursor: pointer; }
+.Treant .collapsed .collapse-switch { background-color: #868DEE; }
+.Treant > .node img {	border: none; float: left; }
+
+.country_flag {
+  font-family: "Courier New", monospace;
+  color: cyan;
+}
+
+.node {
+  padding: 2px;
+  border-radius: 3px;
+  background-color: black;
+  border: 3px solid #000;
+  width: 275px;
+  height: 66px;
+  font-family: 'Arimo', Verdana, sans-serif;
+  font-size: 12px;
+  color: white;
+  cursor: pointer;
+  -webkit-user-select: none;
+
+  &.rare {
+    background-image: url("/images/background/tech_bg_rare.png") !important;
+  }
+
+  &.dangerous {
+    background-image: url("/images/background/tech_bg_dangerous.png") !important;
+  }
+
+  &.physics {
+    border-color: #4396E2;
+    background-image: url("/images/background/tech_bg_physics.png");
+    &.active {
+      background-color: #0F2233;
+    }
+  }
+
+  &.society {
+    border-color: #5ACA9C;
+    background-image: url("/images/background/tech_bg_society.png");
+    &.active {
+      background-color: #173327;
+    }
+  }
+
+  &.engineering {
+    border-color: #E29C43;
+    background-image: url('/images/background/tech_bg_engineering.png');
+    &.active {
+      background-color: #33230F;
+    }
+  }
+}
+
+div.break {
+  flex-basis: 100%;
+  width: 0;
+  height: 0;
+}
+
+p.node-name {
+  height: 20px;
+  font-weight: bold;
+  max-width: 184px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  z-index: 2;
+}
+
+div.icon {
+  background-color: black;
+  border-radius: 4px;
+  width: 52px;
+  height: 52px;
+  float: left;
+  margin: 8px 10px 2px 2px;
+  position: relative;
+  top: 4px;
+}
+
+p {
+  user-select: none;
+}
+
+p.node-desc {
+  margin-bottom: 2px;
+
+  img {
+    height: 16px;
+    width: 16px;
+    margin-top: -2px;
+    margin-right: 3px;
+  }
+}
+
+div.node-status {
+  height: 29px;
+  width: 29px;
+  float: right;
+  position: relative;
+  top: -15px;
+}
+
+.active div.node-status {
+
+}
+
+span.society-research::before {
+  background: url("/images/background/society_research.png") center center no-repeat;
+  //content:  url("images/background/blank11px.png");
+  width: 11px;
+  height: 11px;
+}
+
+span.engineering-research::before {
+  background: url("/images/background/engineering_research.png") center center no-repeat;
+  //content:  url("images/background/blank11px.png");
+  width: 11px;
+  height: 11px;
+}
+
+span.physics-research::before {
+  background: url("/images/background/physics_research.png") center center no-repeat;
+  //content:  url("images/background/blank11px.png");
+  width: 11px;
+  height: 11px;
+}
+
+span.tier {
+  font-weight: bold;
+  &.tier-0 { color: #9d9d9d; }
+  &.tier-1 { color: #ffffff; }
+  &.tier-2 { color: #1eff00; }
+  &.tier-3 { color: #45a9ff; }
+  &.tier-4 { color: #c380f1; }
+  &.tier-5 { color: #ff8000; }
+}
+
+path {
+  stroke-width: 2;
+  &.society { stroke: #5ACA9C; }
+  &.engineering { stroke: #E29C43; }
+  &.physics { stroke: #4396E2; }
+}
+
+
+.extra-data {
+  font-size: 12px;
+  font-family: 'Arimo', Verdana;
+  color: white;
+  border-radius: unset;
+
+  .tooltip-header {
+    width: 100%;
+    color: #84c6b0;
+    font-weight: bold;
+  }
+
+  .prerequisites img {
+    border-radius: 2px;
+    background-color: black;
+    border: 2px solid #000;
+    padding: 1px;
+  }
+
+  .left {
+    margin-right: 5px;
+    display: inline-block;
+    height: 100%;
+    vertical-align: top;
+  }
+
+  img.society {
+    border-color: #5ACA9C;
+  }
+
+  img.engineering {
+    border-color: #E29C43;
+  }
+
+  img.physics {
+    border-color: #4396E2;
+  }
+
+  pre {
+    font-family: 'Arimo', Verdana;
+  }
+}
+
+#anomalies.chart {
+  display: flex;
+  flex-wrap: wrap;
+
+  .node {
+    display: block !important;
+    margin: 0 15px 15px 0;
+  }
+}
+
+img.resource {
+  position: relative;
+  top: 4px;
+  margin-top: -4px;
+  width: 16px;
+  height: 16px;
+}
+
+span.yellow {
+  color: yellow;
+}
+
+span.green {
+  color: lawngreen;
+}
+
+span.red {
+  color: red;
+}
+
+span.cyan {
+  color: #21e8d0;
+}
+
+span.blue-green {
+  color: #3cd092;
+}
+
+span.orange {
+  color: orange;
+}
+
+span.purple {
+  color: #aa93d3;
+  font-weight: bold;
+}
+
+span.factor {
+  display: inline-block;
+  min-width: 40px;
+  color: lime;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  background-color: #003000;
+  margin-bottom: 2px;
+
+  &.red {
+    background-color: #300000;
+    color: red;
+  }
+}
+
